@@ -7,6 +7,9 @@
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 }
+a {
+  font-size: 1.5rem;
+}
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
@@ -17,6 +20,15 @@ body {
     rgb(var(--background-start-rgb));
   height: 95vh;
   width: 95vw;
+}
+#review-box {
+  margin: auto;
+  margin-top: 2%;
+  padding: 15px;
+  height: 15vh;
+  width: 15vw;
+  border-radius: 10%;
+  border: solid rgb(165, 163, 163);
 }
 main {
   height: 95vh;

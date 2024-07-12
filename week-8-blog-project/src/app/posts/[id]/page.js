@@ -35,10 +35,14 @@ export default async function AppPostsId({ params }) {
         </div>
       ))}
       <CommentsForm post_id={params.id} />
-      <div id="comment-section" className="overflow-auto flex flex-col">
+      <div id="comment-section" className="w-3/5 overflow-auto flex flex-col">
+        <h4>User comments:</h4>
         {comrow.map((x) => (
-          <div key={x.id} className="p-1 h-auto">
-            <h3>{x.username}</h3>
+          <div
+            key={x.id}
+            className="p-2 h-auto border-solid border-2 shadow-md ... "
+          >
+            <h2 className="ext-lg">{x.username}</h2>
             <p>{x.comment}</p>
           </div>
         ))}

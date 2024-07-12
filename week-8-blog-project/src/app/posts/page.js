@@ -15,7 +15,7 @@ export default async function AppPosts({ searchParams }) {
     posts.reverse();
   }
   return (
-    <main className="flex flex-col items-center  p-24">
+    <main className="flex flex-col items-center  p-10">
       <h2>Post List</h2>
       <Link href={"/posts?sort=asc"}>Sort ascending</Link> -{" "}
       <Link href={"/posts?sort=desc"}>Sort descending</Link>

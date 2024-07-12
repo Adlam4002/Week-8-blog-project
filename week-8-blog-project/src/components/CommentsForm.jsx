@@ -18,8 +18,13 @@ export default function CommentsForm({ post_id }) {
     redirect(`/posts/${post_id}`);
   }
   return (
-    <div>
-      <form id="form" action={handleSubmit}>
+    <div className="flex w-2/5 mx-auto rounded-lg border-solid border-gray-600 justify-evenly p-5">
+      <form
+        id="form"
+        action={handleSubmit}
+        className="flex flex-col items-center w-2/3 border-2 shadow-lg ..."
+      >
+        <h2>Leave a comment?</h2>
         <label htmlFor="username">Your username:</label>
         <input name="username" placeholder="username"></input>
         <label htmlFor="comment">Your comment:</label>

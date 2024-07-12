@@ -26,10 +26,10 @@ export default function AppNewPost() {
     redirect("/posts");
   }
   return (
-    <main>
+    <main className="flex w-2/5 mx-auto">
       <form
-        id="form"
-        className="flex flex-col items-center w-2/3"
+        id="postform"
+        className="flex flex-col items-center w-2/3 shadow-lg ... rounded-lg"
         action={handleSubmit}
       >
         <label htmlFor="title">Post title:</label>

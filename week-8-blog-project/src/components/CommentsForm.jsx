@@ -18,7 +18,7 @@ export default function CommentsForm({ post_id }) {
     redirect(`/posts/${post_id}`);
   }
   return (
-    <main>
+    <div>
       <form id="form" action={handleSubmit}>
         <label htmlFor="username">Your username:</label>
         <input name="username" placeholder="username"></input>
@@ -34,6 +34,6 @@ export default function CommentsForm({ post_id }) {
 
         <button>Submit</button>
       </form>
-    </main>
+    </div>
   );
 }

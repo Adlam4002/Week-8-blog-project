@@ -18,11 +18,39 @@ export default async function AppCategories({ searchParams }) {
       <h2>Continent List</h2>
 
       <ul>
-        {posts.map((post) => (
+        <Link href={"/categories/europe"}>
+          <li>Europe</li>
+        </Link>
+        <br />
+        <Link href={"/categories/asia"}>
+          <li>Asia</li>
+        </Link>
+        <br />
+        <Link href={"/categories/africa"}>
+          <li>Africa</li>
+        </Link>
+        <br />
+        <Link href={"/categories/north-america"}>
+          <li>North America</li>
+        </Link>
+        <br />
+        <Link href={"/categories/south-america"}>
+          <li>South America</li>
+        </Link>
+        <br />
+        <Link href={"/categories/oceania"}>
+          <li>Oceania</li>
+        </Link>
+        <br />
+        <Link href={"/categories/antarctica"}>
+          <li>Antarctica</li>
+        </Link>
+        <br />
+        {/* {posts.map((post) => (
           <li key={post.id}>
             <Link href={`/categories/${post.category}`}>{post.category}</Link>
           </li>
-        ))}
+        ))} */}
       </ul>
     </main>
   );

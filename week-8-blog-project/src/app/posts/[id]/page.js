@@ -13,7 +13,7 @@ export default async function AppPostsId({ params }) {
   const comrow = comments.rows;
   console.log(`comrow: ${comrow}`);
   return (
-    <main className="flex flex-col items-center  p-24">
+    <main className="flex flex-col h-auto items-center  p-24">
       {posts.map((item) => (
         <div key={item.id}>
           <h2>Article: {item.title}</h2>

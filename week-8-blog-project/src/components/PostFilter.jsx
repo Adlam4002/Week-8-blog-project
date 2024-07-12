@@ -1,4 +1,5 @@
 import { dbConnect } from "@/utils/dbConnection";
+import { SearchParamsContext } from "next/dist/shared/lib/hooks-client-context.shared-runtime";
 export default async function PostFilter() {
   const db = dbConnect();
   const posts = (
@@ -6,5 +7,5 @@ export default async function PostFilter() {
          SELECT * FROM blog_posts 
           `)
   ).rows;
-  return <></>;
+  if (SearchParamsContext.filter) return <></>;
 }

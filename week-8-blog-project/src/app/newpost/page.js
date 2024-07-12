@@ -65,9 +65,9 @@ export default function AppNewPost() {
           <option value="">Select...</option>
           <option value="europe">Europe</option>
           <option value="asia">Asia</option>
-          <option value="Africa">Africa</option>
-          <option value="north america">North America</option>
-          <option value="south america">South America</option>
+          <option value="africa">Africa</option>
+          <option value="north-america">North America</option>
+          <option value="south-america">South America</option>
           <option value="oceania">Australia/Oceania</option>
           <option value="antarctica">Antarctica</option>
         </select>

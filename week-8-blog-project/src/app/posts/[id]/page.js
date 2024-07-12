@@ -1,6 +1,10 @@
 import CommentsForm from "@/components/CommentsForm";
 import { dbConnect } from "@/utils/dbConnection";
 import Image from "next/image";
+export const metadata = {
+  title: "Blog entry",
+  description: "A travel blog by Alex Adlam",
+};
 
 export default async function AppPostsId({ params }) {
   const db = dbConnect();
@@ -13,7 +17,7 @@ export default async function AppPostsId({ params }) {
   const comrow = comments.rows;
   console.log(`comrow: ${comrow}`);
   return (
-    <main className="flex flex-col h-auto items-center  p-24">
+    <main className="flex flex-col items-center  p-24">
       {posts.map((item) => (
         <div key={item.id}>
           <h2>Article: {item.title}</h2>
@@ -31,12 +35,14 @@ export default async function AppPostsId({ params }) {
         </div>
       ))}
       <CommentsForm post_id={params.id} />
-      {comrow.map((x) => (
-        <div key={x.id}>
-          <h3>{x.username}</h3>
-          <p>{x.comment}</p>
-        </div>
-      ))}
+      <div id="comment-section" className="overflow-auto flex flex-col">
+        {comrow.map((x) => (
+          <div key={x.id} className="p-1 h-auto">
+            <h3>{x.username}</h3>
+            <p>{x.comment}</p>
+          </div>
+        ))}
+      </div>
     </main>
   );
 }

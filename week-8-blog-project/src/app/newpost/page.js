@@ -1,6 +1,10 @@
 import { dbConnect } from "@/utils/dbConnection";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
+export const metadata = {
+  title: "Submit a post!",
+  description: "A travel blog by Alex Adlam",
+};
 export default function AppNewPost() {
   async function handleSubmit(formData) {
     "use server";

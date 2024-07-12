@@ -1,5 +1,9 @@
 import Link from "next/link";
 import { dbConnect } from "@/utils/dbConnection";
+export const metadata = {
+  title: "Post list",
+  description: "A travel blog by Alex Adlam",
+};
 export default async function AppPosts({ searchParams }) {
   const db = dbConnect();
   const posts = (

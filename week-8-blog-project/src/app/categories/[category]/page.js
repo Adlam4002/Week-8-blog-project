@@ -2,6 +2,10 @@ import CommentsForm from "@/components/CommentsForm";
 import { dbConnect } from "@/utils/dbConnection";
 import Link from "next/link";
 import Image from "next/image";
+export const metadata = {
+  title: "Category post list",
+  description: "A travel blog by Alex Adlam",
+};
 
 export default async function AppCategoriesCat({ params }) {
   const db = dbConnect();

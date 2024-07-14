@@ -26,7 +26,7 @@ export default function AppNewPost() {
     redirect("/posts");
   }
   return (
-    <main className="flex w-2/5 mx-auto">
+    <main className="flex lg:w-2/5 mx-auto">
       <form
         id="postform"
         className="flex flex-col items-center w-2/3 shadow-lg ... rounded-lg"

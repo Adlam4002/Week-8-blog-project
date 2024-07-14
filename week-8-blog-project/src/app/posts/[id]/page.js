@@ -17,11 +17,11 @@ export default async function AppPostsId({ params }) {
   const comrow = comments.rows;
   console.log(`comrow: ${comrow}`);
   return (
-    <main className="flex flex-col items-center  p-24">
+    <main className="flex flex-col items-center pl-2 h-auto lg:p-24">
       {posts.map((item) => (
-        <div key={item.id}>
+        <div key={item.id} className="flex flex-col items-center">
           <h2>Article: {item.title}</h2>
-          <h3>Author: {item.author}</h3> <h3>Location:{item.location}</h3>
+          <h3>Author: {item.author}</h3> <h3>Location: {item.location}</h3>
           <p>{item.content}</p>
           <Image
             src={
@@ -35,7 +35,10 @@ export default async function AppPostsId({ params }) {
         </div>
       ))}
       <CommentsForm post_id={params.id} />
-      <div id="comment-section" className="w-3/5 overflow-auto flex flex-col">
+      <div
+        id="comment-section"
+        className="w-3/5 lg:overflow-auto flex flex-col"
+      >
         <h4>User comments:</h4>
         {comrow.map((x) => (
           <div

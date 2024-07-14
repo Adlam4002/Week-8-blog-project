@@ -4,5 +4,5 @@ export default async function AppTest() {
   const comments = await db.query(`SELECT * FROM blog_comments`);
   const comrow = comments.rows;
   console.log(comrow);
-  return <h1>Test page</h1>;
+  return <h1>Test page - not for users</h1>;
 }

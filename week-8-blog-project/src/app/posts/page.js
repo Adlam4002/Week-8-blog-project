@@ -15,11 +15,11 @@ export default async function AppPosts({ searchParams }) {
     posts.reverse();
   }
   return (
-    <main className="flex flex-col items-center  p-10">
+    <main className="flex flex-col items-center  lg:p-10">
       <h2>Post List</h2>
       <Link href={"/posts?sort=asc"}>Sort ascending</Link> -{" "}
       <Link href={"/posts?sort=desc"}>Sort descending</Link>
-      <ul className="flex flex-row flex-wrap p-3 h-3/4 w-4/5 overflow-y-auto">
+      <ul className="flex flex-row flex-wrap p-3 h-3/4 w-9/10 lg:w-4/5 overflow-y-auto">
         {posts.map((post) => (
           <Link
             className="bg-cover shadow-lg ..."
